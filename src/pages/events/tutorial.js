@@ -44,7 +44,7 @@ function tutorial() {
                   Back
                 </Link>
                 <Link
-                  href="/events"
+                  href="/events/tutorial/training"
                   className="px-10 py-2 mx-auto text-white rounded sm:px-20 md:px-40 bg-slate-500 hover:bg-slate-700"
                 >
                   Next
