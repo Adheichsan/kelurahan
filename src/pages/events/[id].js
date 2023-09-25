@@ -39,7 +39,7 @@ const ProductDetail = ({ product }) => {
                   src={product.url}
                   title={product.title}
                   allowFullScreen
-                  className="rounded-lg h-[320px] sm:h-[560px] w-full aspect-w-16 aspect-h-9 mx-auto"
+                  className="rounded-lg h-[320px] sm:h-[560px] w-full mx-auto"
                 />
               </div>
             </Col>
