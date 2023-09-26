@@ -6,6 +6,7 @@ function MetaHead(props) {
     <Head>
       <title>{props.title}</title>
       <link rel="icon" type="image/svg+xml" href="/icons/favicon.png" />
+      <link rel="manifest" href="/app.webmanifest"/>
       <meta
         name="description"
         content="Jasa Virtual Reality & Augmented Reality"
