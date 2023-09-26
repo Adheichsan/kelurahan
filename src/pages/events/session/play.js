@@ -1,11 +1,11 @@
 import MetaHead from "@/components/MetaHead";
 import React from "react";
-import FeedbackCard from "./card/FeedbackCard";
+import PlayCard from "./PlayCard";
 
-function feedback() {
+function play() {
   return (
     <>
-      <MetaHead title="Feedback | smarteye.id" />
+      <MetaHead title="Play | smarteye.id" />
       <div className="py-19">
         <div className="relative">
           <div
@@ -18,10 +18,8 @@ function feedback() {
             }}
           >
             <div className="py-20">
-              <div className="py-8">
-                <FeedbackCard />
-              </div>
-              <div className='py-5'>
+              <div className="py-20">
+                <PlayCard />
               </div>
             </div>
           </div>
@@ -36,4 +34,4 @@ function feedback() {
   );
 }
 
-export default feedback;
+export default play;

@@ -34,12 +34,12 @@ const ProductDetail = ({ product }) => {
         <Container>
           <Row>
             <Col>
-              <div className="pt-10 yt">
+              <div className="pt-10 oculus">
                 <iframe
                   src={product.url}
                   title={product.title}
                   allowFullScreen
-                  className="rounded-lg h-[320px] sm:h-[560px] w-full mx-auto"
+                  className="rounded-lg h-[320px] sm:h-[560px] w-full aspect-video mx-auto"
                 />
               </div>
             </Col>

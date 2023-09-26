@@ -1,12 +1,12 @@
 import MetaHead from "@/components/MetaHead";
 import React from "react";
-import FeedbackCard from "./card/FeedbackCard";
+import DoneCard from "./DoneCard";
 
-function feedback() {
+function finish() {
   return (
     <>
-      <MetaHead title="Feedback | smarteye.id" />
-      <div className="py-19">
+      <MetaHead title="Finish | smarteye.id" />
+      <div className="py-20">
         <div className="relative">
           <div
             style={{
@@ -18,22 +18,18 @@ function feedback() {
             }}
           >
             <div className="py-20">
-              <div className="py-8">
-                <FeedbackCard />
-              </div>
-              <div className='py-5'>
+              <div className="py-5">
+                <DoneCard/>
               </div>
             </div>
           </div>
         </div>
         <div className="py-20">
-          <div className="py-20">
-            <div className="py-20"></div>
-          </div>
+          <div className="py-20"></div>
         </div>
       </div>
     </>
   );
 }
 
-export default feedback;
+export default finish;
