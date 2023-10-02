@@ -33,22 +33,24 @@ function FeedbackCard() {
 
     const handleSubmit = async () => {
         try {
+            if (!feedbackData.rating || !feedbackData.review) {
+                alert("Mohon isi rating dan review sebelum mengirim feedback.");
+                return;
+            }
+
             console.log(prisma);
             console.log("isPopupOpen before setState:", isPopupOpen);
-            
-            if (feedbackData.rating && feedbackData.review) {
-                const createdFeedback = await createFeedback();
-                console.log(createdFeedback);
-                setIsPopupOpen(true);
-                console.log("Feedback berhasil dikirim:", createdFeedback);
-            } else {
-                // console.log("Rating dan review harus diisi!");
-                window.alert("Rating dan Review harus diisi")
-            }
+            const createdFeedback = await createFeedback();
+            console.log(createdFeedback);
+
+            setIsPopupOpen(true);
+
+            console.log("Feedback berhasil dikirim:", createdFeedback);
         } catch (error) {
             console.error("Terjadi kesalahan saat mengirim feedback:", error);
         }
     };
+
 
     const handleEmoteClick = (rating) => {
         setFeedbackData({ ...feedbackData, rating });
