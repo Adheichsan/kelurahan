@@ -33,7 +33,7 @@ function DeadLink() {
         <Container>
           <Row>
             <Col>
-              <h1 className="pt-5 font-extrabold text-3xl text-center">
+              <h1 className="pt-5 text-3xl font-extrabold text-center">
                 Our Products
               </h1>
             </Col>
@@ -45,7 +45,7 @@ function DeadLink() {
           <Row>
             {secondFiltered.map((detail) => {
               return (
-                <Col key={detail.id} className="sm:w-1/2 py-5">
+                <Col key={detail.id} className="py-5 sm:w-1/2">
                   <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                     <Link href="/">
                       <Image
@@ -77,9 +77,9 @@ function DeadLink() {
                         >
                           <path
                             stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             d="M1 5h12m0 0L9 1m4 4L9 9"
                           />
                         </svg>
@@ -98,7 +98,7 @@ function DeadLink() {
           <Row>
             {thirdFiltered.map((detail) => {
               return (
-                <Col key={detail.id} className="sm:w-1/2 py-5">
+                <Col key={detail.id} className="py-5 sm:w-1/2">
                   <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                     <Link href="/">
                       <Image
@@ -130,9 +130,9 @@ function DeadLink() {
                         >
                           <path
                             stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             d="M1 5h12m0 0L9 1m4 4L9 9"
                           />
                         </svg>

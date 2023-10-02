@@ -54,7 +54,7 @@ function Footer() {
               <ul className="font-medium text-white">
                 <li className="mb-4">
                   <h1
-                    class="hover:text-slate-300"
+                    className="hover:text-slate-300"
                   >
                     contact@smarteye.id
                   </h1>

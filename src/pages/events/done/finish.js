@@ -6,7 +6,7 @@ function finish() {
   return (
     <>
       <MetaHead title="Finish | smarteye.id" />
-      <div className="py-20">
+      <div className="py-19">
         <div className="relative">
           <div
             style={{

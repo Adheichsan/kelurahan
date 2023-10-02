@@ -22,7 +22,7 @@ function MetaHead(props) {
         content="Wujudkan imajinasi anda menjadi kenyataan bersama kami, dengan teknologi virtual dan augmented reality."
       />
       <meta property="og:image" content="/logo/logo-192.jpg" />
-      <meta property="og:image" itemprop="image" content="/logo/logo-192.jpg"></meta>
+      <meta property="og:image" itemProp="image" content="/logo/logo-192.jpg"></meta>
       <meta property="og:type" content="website"/>
       <meta name="theme-color" content="#D8D9DA"/>
 
