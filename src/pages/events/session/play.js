@@ -1,6 +1,6 @@
 import MetaHead from "@/components/MetaHead";
 import React from "react";
-import PlayCard from "./PlayCard";
+import PlayCard from "../../../components/card/PlayCard";
 
 function play() {
   return (

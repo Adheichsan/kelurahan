@@ -1,5 +1,5 @@
 import { Inter } from "next/font/google";
-import Homepages from "./homepage/Homepages";
+import Homepages from "./views/homepage/Homepages";
 import MetaHead from "@/components/MetaHead";
 
 const inter = Inter({ subsets: ["latin"] });

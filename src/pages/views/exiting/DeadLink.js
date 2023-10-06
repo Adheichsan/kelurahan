@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { detailProduct } from "../../public/data/constant";
+import { detailProduct } from "../../../../public/data/constant";
 import { Col, Container, Row } from "@smarteye/optic";
 
 function DeadLink() {

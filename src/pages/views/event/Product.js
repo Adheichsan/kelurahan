@@ -2,7 +2,7 @@ import React from "react";
 import Link from 'next/link'
 import Image from 'next/image'
 import { Col, Container, Row } from '@smarteye/optic'
-import { detailProduct } from "../../../public/data/constant";
+import { detailProduct } from "../../../../public/data/constant";
 
 function Product() {
   const firstfilter = detailProduct.filter((product) => product.id <= 3);

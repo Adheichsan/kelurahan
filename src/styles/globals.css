@@ -104,3 +104,8 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.hover-effect:hover {
+  transform: scale(2.2);
+  cursor: pointer;
+}

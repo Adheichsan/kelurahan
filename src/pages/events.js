@@ -1,5 +1,5 @@
 import React from 'react'
-import Product from './event/Product'
+import Product from './views/event/Product'
 import MetaHead from '@/components/MetaHead'
 
 function events() {

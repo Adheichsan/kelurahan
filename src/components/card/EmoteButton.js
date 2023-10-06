@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 function EmoteButton({ imageSrc, onClick }) {
     return (
@@ -6,7 +7,7 @@ function EmoteButton({ imageSrc, onClick }) {
             className="m-2"
             onClick={onClick}
         >
-            <img src={imageSrc} alt="Emote" width={30} height={30}/>
+            <Image src={imageSrc} alt="Emote" width={30} height={30}/>
         </button>
     );
 }

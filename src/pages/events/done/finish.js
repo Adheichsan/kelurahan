@@ -1,6 +1,6 @@
 import MetaHead from "@/components/MetaHead";
 import React from "react";
-import DoneCard from "./DoneCard";
+import DoneCard from "../../../components/card/DoneCard";
 
 function finish() {
   return (

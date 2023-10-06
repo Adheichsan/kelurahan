@@ -1,7 +1,7 @@
 import MetaHead from "@/components/MetaHead";
 import { Col, Container, Row } from "@smarteye/optic";
 import React from "react";
-import TrainingCard from "./TrainingCard";
+import TrainingCard from "../../../components/card/TrainingCard";
 import Link from "next/link";
 import Image from "next/image";
 

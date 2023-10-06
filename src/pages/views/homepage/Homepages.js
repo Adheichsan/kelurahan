@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Col, Container, Row } from "@smarteye/optic";
 import { useEffect, useState } from "react";
-import { homeLinks } from "../../../public/data/constant";
+import { homeLinks } from "../../../../public/data/constant";
 
 function Homepages() {
   const [product, setProduct] = useState([]);

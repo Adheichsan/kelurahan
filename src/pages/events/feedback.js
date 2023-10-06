@@ -1,6 +1,6 @@
 import MetaHead from "@/components/MetaHead";
 import React from "react";
-import FeedbackCard from "./card/FeedbackCard";
+import FeedbackCard from "../../components/card/FeedbackCard";
 
 function feedback() {
   return (

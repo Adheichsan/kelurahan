@@ -1,5 +1,5 @@
 import React from "react";
-import Aboutpages from "./about/aboutpages";
+import Aboutpages from "./views/about/aboutpages";
 import MetaHead from "@/components/MetaHead";
 
 function about() {

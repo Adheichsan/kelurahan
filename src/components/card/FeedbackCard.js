@@ -1,67 +1,107 @@
-import React, { useState } from "react";
+import { useEffect, useState } from "react";
 import { Container } from "@smarteye/optic";
 import Link from "next/link";
 import EmoteButton from "./EmoteButton";
 import Image from "next/image";
-
-import { PrismaClient } from "@prisma/client";
+import {VscGithub} from 'react-icons';
 
 function FeedbackCard() {
-    const prisma = new PrismaClient();
-
-    const [feedbackData, setFeedbackData] = useState({
-        rating: "",
-        review: "",
-    });
-
+    const [rating, setRating] = useState("");
+    const [userReview, setUserReview] = useState("");
     const [isPopupOpen, setIsPopupOpen] = useState(false);
 
-    const createFeedback = async () => {
+    const openDB = () => {
+        return new Promise((resolve, reject) => {
+            const dbName = "smarteyedb";
+            const dbVersion = 1;
+
+            const request = window.indexedDB.open(dbName, dbVersion);
+
+            request.onerror = (event) => {
+                console.error("Gagal membuka basis data:", event.target.error);
+                reject(event.target.error);
+            };
+
+            request.onsuccess = (event) => {
+                const db = event.target.result;
+                resolve(db);
+            };
+
+            request.onupgradeneeded = (event) => {
+                const db = event.target.result;
+                const store = db.createObjectStore("feedbackStore", {
+                    keyPath: "id",
+                    autoIncrement: true,
+                });
+            };
+        });
+    };
+
+    const readDataFromDB = async () => {
         try {
-            const create = await prisma.feedback.create({
-                data: {
-                    rating: feedbackData.rating,
-                    review: feedbackData.review,
-                },
-            });
-            return create;
+            const db = await openDB();
+            const transaction = db.transaction("feedbackStore", "readonly");
+            const store = transaction.objectStore("feedbackStore");
+            const data = await store.getAll();
+            console.log("Data dari IndexedDB:", data);
         } catch (error) {
-            console.log(error);
-            return []
+            console.error("Gagal membaca data dari IndexedDB:", error);
+        }
+    };
+
+
+    const saveDataToDB = async (data) => {
+        try {
+            const db = await openDB();
+            const transaction = db.transaction("feedbackStore", "readwrite");
+            const store = transaction.objectStore("feedbackStore");
+            const request = store.add(data);
+            request.onsuccess = () => {
+                console.log("Data berhasil disimpan di IndexedDB");
+            };
+        } catch (error) {
+            console.error("Gagal menyimpan data ke IndexedDB:", error);
         }
     };
 
     const handleSubmit = async () => {
         try {
-            if (!feedbackData.rating || !feedbackData.review) {
+            if (!rating || !userReview) {
                 alert("Mohon isi rating dan review sebelum mengirim feedback.");
                 return;
             }
 
-            console.log(prisma);
-            console.log("isPopupOpen before setState:", isPopupOpen);
-            const createdFeedback = await createFeedback();
-            console.log(createdFeedback);
+            const feedbackData = {
+                rating,
+                review: userReview,
+            };
+
+            await saveDataToDB(feedbackData);
 
             setIsPopupOpen(true);
 
-            console.log("Feedback berhasil dikirim:", createdFeedback);
+            console.log("Feedback berhasil dikirim:", feedbackData);
         } catch (error) {
             console.error("Terjadi kesalahan saat mengirim feedback:", error);
         }
     };
 
 
-    const handleEmoteClick = (rating) => {
-        setFeedbackData({ ...feedbackData, rating });
+    const handleRatingChange = (event) => {
+        setRating(event.target.value);
     };
 
-    const handleReviewChange = (event) => {
-        const newReview = event.target.value;
-        setFeedbackData({ ...feedbackData, review: newReview });
+    const handleUserReviewChange = (event) => {
+        setUserReview(event.target.value);
     };
 
-    console.log(feedbackData);
+    const handleEmoteClick = (selectedRating) => {
+        setRating(selectedRating);
+    };
+
+    useEffect(() => {
+        readDataFromDB();
+    }, []);
 
     return (
         <div className="items-center justify-content-center">
@@ -88,30 +128,35 @@ function FeedbackCard() {
                         <div className="flex justify-center py-4">
                             <EmoteButton
                                 imageSrc="/icons/Layer_1.png"
+                                className="hover-effect"
                                 onClick={() => handleEmoteClick("buruk")}
                             />
                             <EmoteButton
                                 imageSrc="/icons/Layer_1 (2).png"
+                                className="hover-effect"
                                 onClick={() => handleEmoteClick("kurang")}
                             />
                             <EmoteButton
                                 imageSrc="/icons/Layer_1 (3).png"
+                                className="hover-effect"
                                 onClick={() => handleEmoteClick("cukup")}
                             />
                             <EmoteButton
                                 imageSrc="/icons/Layer_1 (1).png"
+                                className="hover-effect"
                                 onClick={() => handleEmoteClick("bagus")}
                             />
                             <EmoteButton
                                 imageSrc="/icons/Layer_1 (4).png"
+                                className="hover-effect"
                                 onClick={() => handleEmoteClick("keren")}
                             />
                         </div>
                         <input
                             type="text"
                             placeholder="Rating"
-                            value={feedbackData.rating}
-                            onChange={handleReviewChange}
+                            value={rating}
+                            onChange={handleRatingChange}
                         />
                     </div>
                     <p className="mb-3 text-center">
@@ -122,8 +167,8 @@ function FeedbackCard() {
                         <textarea
                             placeholder="Uraikan pendapatmu"
                             style={{ width: "300px", height: "100px" }}
-                            value={feedbackData.review}
-                            onChange={handleReviewChange}
+                            value={userReview}
+                            onChange={handleUserReviewChange}
                         ></textarea>
                     </div>
                     <div className="flex justify-between">
@@ -138,7 +183,8 @@ function FeedbackCard() {
                         </div>
                         <div className="py-5">
                             <button
-                                onClick={async () => await handleSubmit()}
+                                // onClick={async () => await handleSubmit()}
+                                onClick={handleSubmit}
                                 className="px-4 py-2 mt-4 font-bold text-white rounded bg-slate-500 hover:bg-slate-600"
                             >
                                 Submit
@@ -181,6 +227,15 @@ function FeedbackCard() {
                                         Kembali ke lobby
                                     </Link>
                                 </div>
+                                {/* <div>
+                                    <h2>Rating:</h2>
+                                    <p>{rating}</p>
+                                </div>
+                                <div>
+                                    <h2>Review:</h2>
+                                    <p>{userReview}</p>
+                                </div> */}
+
                             </div>
                         </div>
                     )}
