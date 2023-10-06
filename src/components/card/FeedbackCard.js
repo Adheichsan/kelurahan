@@ -3,7 +3,6 @@ import { Container } from "@smarteye/optic";
 import Link from "next/link";
 import EmoteButton from "./EmoteButton";
 import Image from "next/image";
-import {VscGithub} from 'react-icons';
 
 function FeedbackCard() {
     const [rating, setRating] = useState("");
@@ -99,6 +98,18 @@ function FeedbackCard() {
         setRating(selectedRating);
     };
 
+    const EmoteButton = ({ imageSrc, grayImageSrc, className, onClick, width, height }) => {
+        return (
+            <img
+                src={rating === imageSrc ? grayImageSrc : imageSrc}
+                alt="Emote"
+                className={className}
+                onClick={onClick}
+                style={{ width, height }}
+            />
+        );
+    };
+
     useEffect(() => {
         readDataFromDB();
     }, []);
@@ -127,41 +138,62 @@ function FeedbackCard() {
                     <div>
                         <div className="flex justify-center py-4">
                             <EmoteButton
-                                imageSrc="/icons/Layer_1.png"
-                                className="hover-effect"
-                                onClick={() => handleEmoteClick("buruk")}
+                                imageSrc="/emoji/cry.png"
+                                grayImageSrc="/icons/gray_Layer_1.png"
+                                className={`hover-effect ${rating === "Buruk" ? "selected" : ""}`}
+                                onClick={() => handleEmoteClick("Buruk")}
+                                width={50}
+                                height={50}
                             />
                             <EmoteButton
-                                imageSrc="/icons/Layer_1 (2).png"
-                                className="hover-effect"
-                                onClick={() => handleEmoteClick("kurang")}
+                                imageSrc="/emoji/sad.png"
+                                grayImageSrc="/icons/gray_Layer_1.png"
+                                className={`hover-effect ${rating === "Kurang" ? "selected" : ""}`}
+                                onClick={() => handleEmoteClick("Kurang")}
+                                width={50}
+                                height={50}
                             />
                             <EmoteButton
-                                imageSrc="/icons/Layer_1 (3).png"
-                                className="hover-effect"
-                                onClick={() => handleEmoteClick("cukup")}
+                                imageSrc="/emoji/confused.png"
+                                grayImageSrc="/icons/gray_Layer_1.png"
+                                className={`hover-effect ${rating === "Cukup" ? "selected" : ""}`}
+                                onClick={() => handleEmoteClick("Cukup")}
+                                width={50}
+                                height={50}
                             />
                             <EmoteButton
-                                imageSrc="/icons/Layer_1 (1).png"
-                                className="hover-effect"
-                                onClick={() => handleEmoteClick("bagus")}
+                                imageSrc="/emoji/happy.png"
+                                grayImageSrc="/icons/gray_Layer_1.png"
+                                className={`hover-effect ${rating === "Bagus" ? "selected" : ""}`}
+                                onClick={() => handleEmoteClick("Bagus")}
+                                width={50}
+                                height={50}
                             />
                             <EmoteButton
-                                imageSrc="/icons/Layer_1 (4).png"
-                                className="hover-effect"
-                                onClick={() => handleEmoteClick("keren")}
+                                imageSrc="/emoji/superstar.png"
+                                grayImageSrc="/icons/gray_Layer_1.png"
+                                className={`hover-effect ${rating === "Keren" ? "selected" : ""}`}
+                                onClick={() => handleEmoteClick("Keren")}
+                                width={50}
+                                height={50}
                             />
                         </div>
-                        <input
+                        {/* <div className="rating-emoji">
+                            {rating === "Buruk" && <span>😞</span>}
+                            {rating === "Kurang" && <span>😐</span>}
+                            {rating === "Cukup" && <span>😊</span>}
+                            {rating === "Bagus" && <span>😃</span>}
+                            {rating === "Keren" && <span>😎</span>}
+                        </div> */}
+                        {/* <input
                             type="text"
                             placeholder="Rating"
                             value={rating}
                             onChange={handleRatingChange}
-                        />
+                        /> */}
                     </div>
                     <p className="mb-3 text-center">
-                        Apa ulasan yang didapat tentang pengalaman virtual reality yang
-                        telah diberikan?
+                        Berikan alasan mengenai ulasan yang telah diberikan
                     </p>
                     <div>
                         <textarea
