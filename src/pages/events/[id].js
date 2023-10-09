@@ -1,8 +1,9 @@
 import React from "react";
-import { detailProduct } from "../../../public/data/constant";
 import { Col, Container, Row } from "@smarteye/optic";
 import MetaHead from "@/components/MetaHead";
 import Link from "next/link";
+
+import { detailProduct } from "../../../public/data/constant";
 
 const ProductDetail = ({ product }) => {
   return (
@@ -33,7 +34,7 @@ const ProductDetail = ({ product }) => {
                 {product.description}
               </p>
               <div className="flex flex-col gap-5 py-5 mx-auto tutor sm:flex-row md:flex">
-              <Link
+                <Link
                   href="/events"
                   className="px-10 py-2 mx-auto text-black rounded sm:px-20 md:px-40 bg-slate-200 hover:bg-slate-400"
                 >
@@ -59,7 +60,9 @@ export default ProductDetail;
 export async function getServerSideProps({ params }) {
   const { id } = params;
 
-  const product = detailProduct.find((product) => product.id === parseInt(id));
+  const productId = parseInt(id);
+
+  const product = detailProduct.find((product) => product.id === productId);
 
   if (!product) {
     return {
