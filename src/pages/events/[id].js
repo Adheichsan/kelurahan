@@ -30,7 +30,7 @@ const ProductDetail = ({ product }) => {
   return (
     <>
       <MetaHead title="Detail Product | smarteye.id" />
-      <div className="py-20 productDetail">
+      <div className="py-20">
         <Container>
           <Row>
             <Col>
@@ -39,13 +39,13 @@ const ProductDetail = ({ product }) => {
                   src={product.url}
                   title={product.title}
                   allowFullScreen
-                  className="rounded-lg h-[320px] sm:h-[560px] w-full aspect-video mx-auto"
+                  className="rounded-lg h-[320px] sm:h-[560px] w-full aspect-w-16 aspect-h-9 mx-auto"
                 />
               </div>
             </Col>
           </Row>
           <Row className="py-5">
-            <Col className="sm:w-1/2">
+            <Col>
               <h1 className="text-lg sm:text-2xl font-bold">{product.title}</h1>
             </Col>
             <Col className="sm:w-1/2 xs:w-full xs:flex xs:justify-center xs:mt-5">
