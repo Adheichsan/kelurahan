@@ -193,9 +193,8 @@ function Homepages() {
                     Media Edukasi
                   </h1>
                   <p className="text-center text-slate-500">
-                    Pengunjung dapat berpartisipasi dalam pembelajaran
-                    interaktif dengan berinteraksi langsung dalam lingkungan
-                    virtual.
+                    Pengunjung dapat merasakan lansung pembelajaran secara
+                    interaktif lansung dengan lingkungan virtual.
                   </p>
                 </div>
               </Col>
@@ -242,7 +241,7 @@ function Homepages() {
                   interaktif di masa depan.
                 </h1>
 
-                <div className="flex flex-col sm:flex-row">
+                {/* <div className="flex flex-col sm:flex-row">
                   <Link
                     href="https://api.whatsapp.com/send/?phone=62811898211&text&app_absent=0"
                     className="px-6 py-2 mt-3 ml-3 mr-3 text-white rounded bg-slate-400 hover:bg-slate-700"
@@ -255,7 +254,7 @@ function Homepages() {
                   >
                     Info lainnya
                   </Link>
-                </div>
+                </div> */}
               </Col>
             </Row>
           </Container>

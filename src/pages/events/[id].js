@@ -13,11 +13,6 @@ const ProductDetail = ({ product }) => {
         <Container>
           <Row className="pt-10">
             <Col>
-              <h1 className="font-bold text-center text-2xl">{product.title}</h1>
-            </Col>
-          </Row>
-          <Row>
-            <Col>
               <div className="pt-10 oculus">
                 <iframe
                   src={product.url}
@@ -26,6 +21,13 @@ const ProductDetail = ({ product }) => {
                   className="rounded-lg h-[320px] sm:h-[560px] w-full aspect-w-16 aspect-h-9 mx-auto"
                 />
               </div>
+              <div className="flex justify-between items-center mt-5">
+                <h1 className="font-bold text-2xl">{product.title}</h1>
+                <Link href="/events/tutorial"
+                  className="bg-slate-500 text-white px-10 py-2 rounded hover:bg-slate-700">
+                  Selanjutnya 
+                </Link>
+              </div>
             </Col>
           </Row>
           <Row className="pt-5 pb-20">
@@ -33,20 +35,6 @@ const ProductDetail = ({ product }) => {
               <p className="text-justify">
                 {product.description}
               </p>
-              <div className="flex flex-col gap-5 py-5 mx-auto tutor sm:flex-row md:flex">
-                <Link
-                  href="/events"
-                  className="px-10 py-2 mx-auto text-black rounded sm:px-20 md:px-40 bg-slate-200 hover:bg-slate-400"
-                >
-                  Back
-                </Link>
-                <Link
-                  href="/events/tutorial"
-                  className="px-10 py-2 mx-auto text-white rounded sm:px-20 md:px-40 bg-slate-500 hover:bg-slate-700"
-                >
-                  Next
-                </Link>
-              </div>
             </Col>
           </Row>
         </Container>

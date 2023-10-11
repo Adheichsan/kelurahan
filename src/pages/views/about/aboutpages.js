@@ -35,7 +35,7 @@ function Aboutpages() {
                     <Row>
                         <Col className="px-5 py-5 md:w-1/2">
                             <h1 className="text-3xl font-bold">
-                                Who we are?
+                                Who are we?
                             </h1>
                         </Col>
                         <Col className="px-5 py-5 md:w-1/2">
