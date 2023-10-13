@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 function Navbar() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isDesktopDropdownOpen, setDesktopDropdownOpen] = useState(false);
+  const router = useRouter();
 
   // Toggle mobile menu when the button is clicked
   const toggleMobileMenu = () => {
@@ -21,6 +23,11 @@ function Navbar() {
     setMobileMenuOpen(false);
   };
 
+  useEffect(() => {
+    setMobileMenuOpen(false);
+    setDesktopDropdownOpen(false);
+  }, [router.asPath]);
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-gray-400 shadow-lg">
       <div className="flex flex-wrap items-center justify-between max-w-screen-xl p-4 mx-auto">
@@ -32,7 +39,7 @@ function Navbar() {
           alt="smarteye-logo"
           />
           <span className="self-center ml-3 text-2xl font-bold whitespace-nowrap">
-            smarteye<span className="font-semibold">.id</span>
+            smarteye<span className="font-normal">.id</span>
           </span>
         </Link>
         <button
@@ -97,7 +104,7 @@ function Navbar() {
                 aria-controls="desktopDropdown"
                 aria-expanded={isDesktopDropdownOpen}
               >
-                Our Product{" "}
+                Product{" "}
                 <svg
                   className={`w-2.5 h-2.5 ml-2.5 transition-transform ${
                     isDesktopDropdownOpen ? "rotate-180" : "rotate-0"
@@ -185,6 +192,7 @@ function Navbar() {
             <li>
               <Link
                 href="https://api.whatsapp.com/send/?phone=62811898211&text&app_absent=0"
+                target="_blank"
                 className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-slate-400 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
                 Contact us

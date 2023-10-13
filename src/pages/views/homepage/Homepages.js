@@ -166,9 +166,9 @@ function Homepages() {
               <Col className="py-5 sm:py-10 sm:w-1/3 md:w-1/3 lg:w-1/3">
                 <div className="flex flex-col items-center">
                   <Image
-                    src="/homepages/Group.png"
-                    width={40}
-                    height={40}
+                    src="/homepages/time.png"
+                    width={35}
+                    height={35}
                     alt="cost"
                   />
                   <h1 className="pt-3 pb-3 text-lg font-bold text-center sm:text-xl md:text-xl lg:text-xl">
@@ -184,7 +184,7 @@ function Homepages() {
               <Col className="py-5 sm:py-10 sm:w-1/3 md:w-1/3 lg:w-1/3">
                 <div className="flex flex-col items-center">
                   <Image
-                    src="/homepages/Group.png"
+                    src="/homepages/edu.png"
                     width={40}
                     height={40}
                     alt="cost"

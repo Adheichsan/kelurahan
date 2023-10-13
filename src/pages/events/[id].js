@@ -21,11 +21,10 @@ const ProductDetail = ({ product }) => {
                   className="rounded-lg h-[320px] sm:h-[560px] w-full aspect-w-16 aspect-h-9 mx-auto"
                 />
               </div>
-              <div className="flex justify-between items-center mt-5">
-                <h1 className="font-bold text-2xl">{product.title}</h1>
-                <Link href="/events/tutorial"
-                  className="bg-slate-500 text-white px-10 py-2 rounded hover:bg-slate-700">
-                  Selanjutnya 
+              <div className="flex flex-col lg:flex-row justify-between items-center mt-5">
+                <h1 className="font-bold text-2xl mb-3 lg:mb-0 lg:mr-5">{product.title}</h1>
+                <Link href="/events/tutorial" as="/events/tutorial" className="bg-slate-500 text-white px-10 py-2 rounded hover:bg-slate-700">
+                  Selanjutnya
                 </Link>
               </div>
             </Col>

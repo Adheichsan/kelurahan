@@ -5,25 +5,24 @@ import Image from "next/image";
 function Aboutpages() {
     return (
         <div className="pt-18">
-            <div className="relative">
+            <div className="relative pt-8">
                 <div
                     style={{
-                        backgroundImage: "url('/about/11111.png')",
+                        backgroundImage: "url('/about/bgabout.png')",
                         backgroundSize: "cover",
                         backgroundPosition: "center",
-                        height: "50vh",
+                        height: "48vh",
                         width: "100%",
                     }}
                     className="bg-center bg-cover h-1/2 md:h-1/2 lg:h-1/2 xl:h-1/2"
                 >
-                <Row className="flex flex-col pt-10">
+                <Row className="flex flex-col pt-14">
                     <Col>
-                        <h1 className="pt-10 mt-10 ml-8 text-4xl font-extrabold text-center text-slate-500">
+                        <h1 className="pt-12 mt-10 ml-8 text-4xl font-extrabold text-center text-slate-500">
                         Smarteye.id
                         </h1>
-                        <h3 className="mt-4 ml-8 text-lg font-bold text-center text-black">
-                            Wujudkan imajinasi anda menjadi kenyataan bersama kami, <br/>
-                            dengan teknologi virtual dan augmented reality.
+                        <h3 className="mt-4 ml-8 text-lg font-semibold text-center text-black">
+                        Wujudkan imajinasi anda menjadi kenyataan bersama kami, dengan teknologi virtual dan augmented reality.
                         </h3>
                     </Col>
                 </Row>
@@ -40,7 +39,7 @@ function Aboutpages() {
                         </Col>
                         <Col className="px-5 py-5 md:w-1/2">
                             <p>
-                                Immersive Technology Solution Provider, focusing on Next-Gen Virtual Training, Virtual Expo, and Virtual Marketing powered by own engine.
+                            Realisasikan imajinasi Anda bersama kami, melalui teknologi virtual dan augmented reality, untuk menciptakan pengalaman yang luar biasa.
                             </p>
                         </Col>
                     </Row>
@@ -175,19 +174,74 @@ function Aboutpages() {
                 <Container>
                     <Row>
                         <Col>
-                            <h1 className="text-2xl font-bold text-center">
-                                Achievements
+                            <h1 className="text-2xl font-bold text-center py-5">
+                                Our Achievements
                             </h1>
                         </Col>
                     </Row>
                     <Row className="py-5">
                         <Col>
-                            <ol className="text-center">
-                                <li className="py-3">VR Innovation Indonesia Win 1st Position in Paris for Global <span className="font-bold">LOreal</span> VR Competition</li>
-                                <li className="py-3">VR Innovation enter the final stage for <span className="font-bold">Pertamina</span> Group innovation competition</li>
-                                <li className="py-3">VR Innovation goes to Dubai <span className="font-bold">(SKK Migas)</span></li>
-                                <li className="py-3">The first AR Games at US Embassy - Indonesia <span className="font-bold">(@america)</span></li>
-                            </ol>
+                            <div className="max-w-sm mx-auto bg-white border border-gray-200 rounded-lg shadow-xl md:max-w-md lg:max-w-lg xl:max-w-xl">
+                                <Image
+                                src="/about/achiev1.png"
+                                alt=""
+                                width={300}
+                                height={200}
+                                className="rounded-t-lg w-full object-cover"/>
+                                <div className="py-5 px-3">
+                                    <h5 className="mb-2 text-xl font-bold tracking-tight text-center text-slate-500">
+                                        The first AR Games at US Embassy - Indonesia (@america)
+                                    </h5>
+                                </div>
+                            </div>
+                        </Col>
+                        <Col>
+                            <div className="max-w-sm mx-auto bg-white border border-gray-200 rounded-lg shadow-xl md:max-w-md lg:max-w-lg xl:max-w-xl">
+                                <Image
+                                src="/about/achiev2.png"
+                                alt=""
+                                width={300}
+                                height={200}
+                                className="rounded-t-lg w-full object-cover"/>
+                                <div className="py-5 px-3">
+                                    <h5 className="mb-2 text-xl font-bold tracking-tight text-center text-slate-500">
+                                        VR Innovation enter the final stage for Pertamina Group innovation competition
+                                    </h5>
+                                </div>
+                            </div>
+                        </Col>
+                    </Row>
+                    <Row className="py-5">
+                        <Col>
+                            <div className="max-w-sm mx-auto bg-white border border-gray-200 rounded-lg shadow-xl md:max-w-md lg:max-w-lg xl:max-w-xl">
+                                <Image
+                                src="/about/achiev3.png"
+                                alt=""
+                                width={300}
+                                height={200}
+                                className="rounded-t-lg w-full object-cover"/>
+                                <div className="py-5 px-3">
+                                    <h5 className="mb-2 text-xl font-bold tracking-tight text-center text-slate-500">
+                                        VR Innovation Indonesia Win 1st Position in Paris for Global LOreal VR Competitio
+                                    </h5>
+                                </div>
+                            </div>
+                        </Col>
+                        <Col>
+                            <div className="max-w-sm mx-auto bg-white border border-gray-200 rounded-lg shadow-xl md:max-w-md lg:max-w-lg xl:max-w-xl">
+                                <Image
+                                src="/about/achiev4.png"
+                                alt=""
+                                width={300}
+                                height={200}
+                                className="rounded-t-lg w-full object-cover"/>
+                                <div className="py-5 px-3">
+                                    <h5 className="mb-2 text-xl font-bold tracking-tight text-center text-slate-500">
+                                        VR Innovation goes to Dubai <br/>
+                                        (SKK Migas)
+                                    </h5>
+                                </div>
+                            </div>
                         </Col>
                     </Row>
                 </Container>

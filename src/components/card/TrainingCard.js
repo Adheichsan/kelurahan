@@ -11,7 +11,7 @@ function TrainingCard() {
           <Col className="flex justify-center items-center sm:w-full">
             <div className="flex items-center">
               <Image
-                src="/icons/icon.png"
+                src="/icons/run.png"
                 height={50}
                 width={50}
                 alt="achievements"
@@ -26,7 +26,7 @@ function TrainingCard() {
           <Col className="flex justify-center items-center sm:w-full py-8">
             <div className="flex items-center">
               <Image
-                src="/icons/time.svg"
+                src="/icons/time1.png"
                 height={50}
                 width={50}
                 alt="achievements"
@@ -41,7 +41,7 @@ function TrainingCard() {
           <Col className="flex justify-center items-center sm:w-full">
             <div className="flex items-center">
               <Image
-                src="/icons/lens.svg"
+                src="/icons/quest2.png"
                 height={50}
                 width={50}
                 alt="achievements"

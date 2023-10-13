@@ -18,9 +18,7 @@ function training() {
                   Explore our Virtual World
                 </h1>
                 <p className="py-5 text-center">
-                  Anda sekarang berada dalam dunia virtual yang luar biasa! Mari
-                  kita jelajahi berbagai ruangan yang tersedia dengan semangat
-                  penuh!
+                  Anda berada dalam virtual world. Silahkan memilih ruangan yang tersedia.
                 </p>
                 <Image
                   src="/events/right-side.png"

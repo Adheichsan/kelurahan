@@ -1,7 +1,4 @@
-import MetaHead from "@/components/MetaHead";
-import { Col, Container, Row } from "@smarteye/optic";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import React from "react";
 import { Instagram, Youtube, Linkedin } from "react-feather";
 import Image from "next/image";
@@ -25,16 +22,15 @@ function Footer() {
               </span>
             </Link>
             <span className="block text-base text-white py-4 sm:py-7">
-              The Telkom Hub
+              Telkom Corpu
             </span>
             <span className="block text-sm text-white">
-              Jl. Gatot Subroto No.Kav. 52, RT.6/RW.1, West Kuningan,
-              Mampang Prapatan, South Jakarta City, Jakarta 12710
+              Jalan Gegerkalong Hilir Gegerkalong, Sukarasa, Kec. Sukasari, Kota Bandung, Jawa Barat 40152
             </span>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-6">
             <div className="mb-4 sm:ml-10">
-              <h2 className="text-sm font-semibold text-white">Menu</h2>
+              <h2 className="text-sm font-semibold text-white py-5">Menu</h2>
               <ul className="font-medium text-white">
                 <li className="mb-2">
                   <Link href="/" className="hover:text-slate-300">
@@ -43,7 +39,7 @@ function Footer() {
                 </li>
                 <li className="mb-2">
                   <Link href="/events" className="hover:text-slate-300">
-                    Our Product
+                    Product
                   </Link>
                 </li>
                 <li>
@@ -54,7 +50,7 @@ function Footer() {
               </ul>
             </div>
             <div>
-              <ul className="font-medium text-white">
+              <ul className="font-medium text-white py-5">
                 <li className="mb-2">
                   <a href="mailto:contact@smarteye.id" className="hover:text-slate-300">
                     contact@smarteye.id
@@ -79,6 +75,7 @@ function Footer() {
           <Link
             href="https://www.instagram.com/smarteyeid/"
             className="flex items-center text-white hover:text-slate-300 dark:hover:text-white"
+            target="_blank"
           >
             <Instagram size={20} />
             <span className="sr-only">Instagram page</span>
@@ -86,6 +83,7 @@ function Footer() {
           <Link
             href="https://www.youtube.com/channel/UCdJaE--veL4G1vrSBTU4R0g"
             className="flex items-center text-white hover:text-slate-300 dark:hover:text-white"
+            target="_blank"
           >
             <Youtube size={20} />
             <span className="sr-only">Youtube page</span>
@@ -93,6 +91,7 @@ function Footer() {
           <Link
             href="https://www.linkedin.com/company/smarteye-id/"
             className="flex items-center text-white hover:text-slate-300 dark:hover:text-white"
+            target="_blank"
           >
             <Linkedin size={20} />
             <span className="sr-only">LinkedIn page</span>
