@@ -5,7 +5,7 @@ import React from 'react'
 function teleponPenting() {
   return (
     <><MetaHead 
-    title="Telepon Penting | Discord"/><div>
+    title="Telepon Penting | Kelurahan Patriot"/><div>
       <UrgentsCall />
     </div></>
   )

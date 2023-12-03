@@ -12,7 +12,7 @@ function AhliWaris() {
 
     return (
         <><MetaHead
-            title="Pelayanan | Discord" />
+            title="Pelayanan | Kelurahan Patriot" />
             <div className='pt-20'>
                 <Row>
                     <Col className='pt-10'>

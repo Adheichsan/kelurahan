@@ -1,18 +1,45 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import MetaHead from '@/components/MetaHead';
 import { useRouter } from 'next/router';
 
 function SignUp() {
   const router = useRouter();
+  const [fullname, setFullName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   const handleSignInClick = () => {
     router.push('/form/sign-in');
   };
 
+  const handleSignUpSubmit = async (e) => {
+    e.preventDefault();
+
+    const response = await fetch('/api/signup', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        fullname: fullname,
+        email: email,
+        password: password,
+      }),
+    });
+
+    if (response.ok) {
+      router.push('/dashboard');
+    } else {
+      const data = await response.json();
+      console.error('Failed to create user account:', data.error);
+    }
+  };
+
+
   return (
-    <><MetaHead
-      title="Register | Discord" />
+    <>
+      <MetaHead title="Register | Kelurahan Patriot" />
       <div className='pt-20'>
         <div className="flex flex-col-reverse items-center justify-center md:flex-row md:h-screen">
           <div className="w-full md:w-1/2 md:order-2">
@@ -27,7 +54,7 @@ function SignUp() {
                     Join us by creating a new account.
                   </p>
                 </div>
-                <form className="mt-8 space-y-6">
+                <form className="mt-8 space-y-6" onSubmit={handleSignUpSubmit}>
                   <div>
                     <label htmlFor="name" className="block font-bold text-gray-700">
                       Full Name
@@ -37,7 +64,10 @@ function SignUp() {
                       type="text"
                       placeholder="Enter your full name"
                       className="w-full px-4 py-3 mt-1 border-gray-300 rounded-md focus:border-indigo-500 focus:ring focus:ring-indigo-200"
-                      required />
+                      value={fullname}
+                      onChange={(e) => setFullName(e.target.value)}
+                      required
+                    />
                   </div>
                   <div>
                     <label htmlFor="email" className="block font-bold text-gray-700">
@@ -48,7 +78,10 @@ function SignUp() {
                       type="email"
                       placeholder="Enter your email"
                       className="w-full px-4 py-3 mt-1 border-gray-300 rounded-md focus:border-indigo-500 focus:ring focus:ring-indigo-200"
-                      required />
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                    />
                   </div>
                   <div>
                     <label
@@ -62,7 +95,10 @@ function SignUp() {
                       type="password"
                       placeholder="Enter your password"
                       className="w-full px-4 py-3 mt-1 border-gray-300 rounded-md focus:border-indigo-500 focus:ring focus:ring-indigo-200"
-                      required />
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      required
+                    />
                   </div>
                   <div>
                     <button
@@ -85,7 +121,8 @@ function SignUp() {
             </div>
           </div>
         </div>
-      </div></>
+      </div>
+    </>
   );
 }
 

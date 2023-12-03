@@ -5,7 +5,7 @@ import React from 'react'
 function Struktur() {
   return (
     <><MetaHead 
-    title="Struktur Organisasi | Discord"/>
+    title="Struktur Organisasi | Kelurahan Patriot"/>
     <div>
       <StrukturOrganisasi />
     </div></>

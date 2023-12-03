@@ -5,7 +5,7 @@ import React from 'react'
 function agenda() {
   return (
     <><MetaHead 
-    title="Agenda | Discord"/>
+    title="Agenda | Kelurahan Patriot"/>
     <div>
       <Agenda />
     </div></>

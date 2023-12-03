@@ -5,7 +5,7 @@ import React from 'react'
 function Sambutan() {
   return (
     <><MetaHead 
-    title="Sambutan Lurah | Discord"/>
+    title="Sambutan Lurah | Kelurahan Patriot"/>
     <div>
       <SambutanLurah />
     </div></>

@@ -6,7 +6,7 @@ function profile() {
     return (
         <>
         <MetaHead
-        title="Profile | Discord" />
+        title="Profile | Kelurahan Patriot" />
             <div className="pt-20">
                 <Container className="py-20">
                     <div className="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">

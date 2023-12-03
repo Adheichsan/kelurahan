@@ -6,7 +6,7 @@ function page404() {
   return (
     <>
       <MetaHead
-        title="smarteye.id"
+        title="Kelurahan Patriot"
       />
       <div>
         <DeadLink />

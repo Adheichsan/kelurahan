@@ -52,13 +52,13 @@ function Navbar() {
       <div className="flex flex-wrap items-center justify-between max-w-screen-xl p-4 mx-auto">
         <Link href="/" className="flex items-center">
           <Image
-            src="/images/dc.png"
-            width={40}
-            height={40}
-            alt="smarteye-logo"
+            src="/images/patriot.png"
+            width={70}
+            height={70}
+            alt="patriot"
           />
           <span className="self-center ml-3 text-xl font-semibold whitespace-nowrap">
-            Kelurahan Discord
+            Kelurahan Patriot
           </span>
         </Link>
 

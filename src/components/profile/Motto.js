@@ -10,7 +10,7 @@ function Motto() {
         width={300}
         height={100}
         alt='kel'
-        src="/discord-logo.png"
+        src="/images/patriot.png"
         className='mx-auto'/>
       </div>
 

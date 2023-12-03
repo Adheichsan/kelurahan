@@ -5,7 +5,7 @@ import React from 'react'
 function visiMisi() {
   return (
     <><MetaHead 
-    title="Visi & Misi | Discord"/>
+    title="Visi & Misi | Kelurahan Patriot"/>
     <div>
       <VisiMisi />
     </div></>

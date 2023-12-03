@@ -5,7 +5,7 @@ import React from 'react'
 function pengumuman() {
   return (
     <><MetaHead 
-    title="Pengumuman | Discord"/>
+    title="Pengumuman | Kelurahan Patriot"/>
     <div>
       <Information />
     </div></>

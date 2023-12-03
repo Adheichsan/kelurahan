@@ -5,7 +5,7 @@ import React from 'react'
 function galeri() {
   return (
     <><MetaHead 
-    title="Galeri | Discord"/><div>
+    title="Galeri | Kelurahan Patriot"/><div>
       <Gallery />
     </div></>
   )

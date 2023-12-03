@@ -5,7 +5,7 @@ import React from 'react'
 function motto() {
   return (
     <><MetaHead 
-    title="Motto | Discord"/>
+    title="Motto | Kelurahan Patriot"/>
     <div>
       <Motto />
     </div></>

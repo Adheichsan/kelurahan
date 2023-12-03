@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
     <MetaHead 
-      title="Kelurahan Discord"
+      title="Kelurahan Patriot"
     />
       <div>
         <Homepages/>

@@ -6,7 +6,7 @@ function about() {
   return (
     <>
     <MetaHead
-      title="About | smarteye.id"
+      title="About | Kelurahan Patriot"
     />
       <div>
         <Aboutpages />

@@ -11,7 +11,7 @@ function SignIn() {
   };
   return (
     <><MetaHead
-      title="Login | Discord" />
+      title="Login | Kelurahan Patriot" />
       <div className='pt-20'>
         <div className="flex flex-col-reverse items-center justify-center md:flex-row md:h-screen">
           <div className="w-full md:w-1/2 md:order-2">

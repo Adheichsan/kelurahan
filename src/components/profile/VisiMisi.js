@@ -16,7 +16,7 @@ function VisiMisi() {
       <Container>
         <Row>
           <Col className='py-5'>
-            <h1 className='text-2xl font-bold text-center'>VISI DAN MISI KELURAHAN DISCORD APP</h1>
+            <h1 className='text-2xl font-bold text-center'>VISI DAN MISI KELURAHAN PATRIOT</h1>
           </Col>
         </Row>
 

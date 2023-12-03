@@ -10,13 +10,13 @@ function StrukturOrganisasi() {
         width={300}
         height={100}
         alt='kel'
-        src="/discord-logo.png"
+        src="/images/patriot.png"
         className='mx-auto'/>
       </div>
       <Container>
       <Row>
           <Col className='py-5'>
-            <h1 className='text-2xl font-bold text-center'>STRUKTUR ORGANISASI KELURAHAN DISCORD</h1>
+            <h1 className='text-2xl font-bold text-center'>STRUKTUR ORGANISASI KELURAHAN KOTA PATRIOT</h1>
           </Col>
         </Row>
         <Row>

@@ -5,7 +5,7 @@ import React from 'react'
 function dokumen() {
   return (
     <><MetaHead 
-    title="Dokumen | Discord"/>
+    title="Dokumen | Kelurahan Patriot"/>
     <div>
       <Documents />
     </div></>

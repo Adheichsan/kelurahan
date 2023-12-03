@@ -5,7 +5,7 @@ import React from 'react'
 function berita() {
   return (
     <><MetaHead 
-    title="Berita | Discord"/>
+    title="Berita | Kelurahan Patriot"/>
     <div>
       <News />
     </div></>
