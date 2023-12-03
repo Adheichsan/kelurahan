@@ -4,9 +4,6 @@ First, run the development server:
 
 ```bash
 
-buat file baru :
-NEXT_PUBLIC_BASE_URL=http://localhost:3000/
-
 npm install
 
 npm run dev

@@ -1,5 +1,5 @@
 import React from "react";
-import DeadLink from "@/pages/views/exiting/DeadLink";
+import DeadLink from "@/components/exiting/DeadLink";
 import MetaHead from "@/components/MetaHead";
 
 function page404() {

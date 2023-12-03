@@ -1,5 +1,5 @@
 import { Inter } from "next/font/google";
-import Homepages from "./views/homepage/Homepages";
+import Homepages from "../components/homepages/Homepages";
 import MetaHead from "@/components/MetaHead";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
     <MetaHead 
-      title="Jasa Virtual & Augmented Reality | smarteye.id"
+      title="Kelurahan Discord"
     />
       <div>
         <Homepages/>
