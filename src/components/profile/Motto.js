@@ -23,7 +23,7 @@ function Motto() {
         <Row className='pb-20'>
           <Col className='text-center'>
           <h1 className='text-2xl font-bold'>
-            Melayani dengan "B E R E T I K A"
+            Melayani dengan B E R E T I K A
           </h1>
           <p className='pt-2'>
             <span className='font-bold'>B</span>erintegritas
