@@ -7,7 +7,7 @@ function SambutanLurah() {
       <Container className='pt-10 pb-20'>
         <Row>
           <Col>
-          <h1 className='font-bold'>Assalamu'alaikum warahmatullah wabarakatuh.</h1>
+          <h1 className='font-bold'>Assalamualaikum warahmatullah wabarakatuh.</h1>
           </Col>
         </Row>
 
