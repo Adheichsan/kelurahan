@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { Col, Container, Row } from "@smarteye/optic";
+import YourData from "./Data";
 
 function Homepages() {
   return (
@@ -9,7 +10,7 @@ function Homepages() {
       <div className="pt-10 homepage bg-slate-200">
         <section className="bg-center bg-no-repeat bg-[url('/images/kec.jpg')] bg-gray-700 bg-blend-multiply" style={{ backgroundSize: 'cover', backgroundPosition: 'center' }}>
           <div className="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
-            <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">Kelurahan Discord</h1>
+            <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">Kelurahan Margahayu</h1>
             <p className="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">Kelurahan kami, komunitas berkembang bersama. Bersatu, berinovasi, dan memberdayakan. Menuju kehidupan yang berkualitas dan penuh semangat bagi setiap warganya.</p>
             <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
               <Link href="/informasi/agenda" className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
@@ -30,85 +31,7 @@ function Homepages() {
         <div className="pb-10 contentvr1 pl-12">
           <Row className="pt-5">
             <Col className="pr-0 md:pr-2">
-              <div className="bg-white border border-gray-200 rounded-lg shadow p-4 flex items-center">
-                <img
-                  className="w-40 h-40 object-cover mr-4"
-                  src="/images/unsplash1.jpg"
-                  alt=""
-                />
-                <div>
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Jalan-Jalan di Dunia Maya: Bedain antara Situs Asli dan Tiruan Gimana Sih?
-                  </h5>
-                  <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                    Mudahnya mencari sebuah informasi terutama di era perkembangan teknologi yang terjadi sekarang, membuat orang menjadi “buta” membedakan website asli dengan website tiruan.
-                  </p>
-                </div>
-              </div>
-
-              <div className="bg-white border border-gray-200 rounded-lg shadow p-4 flex items-center mt-5">
-                <img
-                  className="w-40 h-40 object-cover mr-4"
-                  src="/images/unsplash1.jpg"
-                  alt=""
-                />
-                <div>
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Jalan-Jalan di Dunia Maya: Bedain antara Situs Asli dan Tiruan Gimana Sih?
-                  </h5>
-                  <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                    Mudahnya mencari sebuah informasi terutama di era perkembangan teknologi yang terjadi sekarang, membuat orang menjadi “buta” membedakan website asli dengan website tiruan.
-                  </p>
-                </div>
-              </div>
-
-              <div className="bg-white border border-gray-200 rounded-lg shadow p-4 flex items-center mt-5">
-                <img
-                  className="w-40 h-40 object-cover mr-4"
-                  src="/images/unsplash1.jpg"
-                  alt=""
-                />
-                <div>
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Jalan-Jalan di Dunia Maya: Bedain antara Situs Asli dan Tiruan Gimana Sih?
-                  </h5>
-                  <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                    Mudahnya mencari sebuah informasi terutama di era perkembangan teknologi yang terjadi sekarang, membuat orang menjadi “buta” membedakan website asli dengan website tiruan.
-                  </p>
-                </div>
-              </div>
-
-              <div className="bg-white border border-gray-200 rounded-lg shadow p-4 flex items-center mt-5">
-                <img
-                  className="w-40 h-40 object-cover mr-4"
-                  src="/images/unsplash1.jpg"
-                  alt=""
-                />
-                <div>
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Jalan-Jalan di Dunia Maya: Bedain antara Situs Asli dan Tiruan Gimana Sih?
-                  </h5>
-                  <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                    Mudahnya mencari sebuah informasi terutama di era perkembangan teknologi yang terjadi sekarang, membuat orang menjadi “buta” membedakan website asli dengan website tiruan.
-                  </p>
-                </div>
-              </div>
-
-              <div className="bg-white border border-gray-200 rounded-lg shadow p-4 flex items-center mt-5">
-                <img
-                  className="w-40 h-40 object-cover mr-4"
-                  src="/images/unsplash1.jpg"
-                  alt=""
-                />
-                <div>
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Jalan-Jalan di Dunia Maya: Bedain antara Situs Asli dan Tiruan Gimana Sih?
-                  </h5>
-                  <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                    Mudahnya mencari sebuah informasi terutama di era perkembangan teknologi yang terjadi sekarang, membuat orang menjadi “buta” membedakan website asli dengan website tiruan.
-                  </p>
-                </div>
-              </div>
+              <YourData/>
             </Col>
 
             <Col md={4} className="pl-0 md:pl-2">

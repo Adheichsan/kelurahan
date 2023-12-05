@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image"
 
 function FootersPages() {
   return (
@@ -8,9 +9,16 @@ function FootersPages() {
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
             <Link href="/" className="flex items-center">
-              <img src="/images/dc.png" className="h-8 me-3" alt="" />
-              <span className="text-white self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Kelurahan Discord</span>
+              <Image
+                width={60}
+                height={60}
+                src="/images/patriot.png"
+                className="h-8 me-3"
+                alt=""
+              />
+              <span className="text-white self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Kelurahan Margahayu</span>
             </Link>
+
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div>
@@ -35,22 +43,11 @@ function FootersPages() {
                 </li>
               </ul>
             </div>
-            <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white text-white">Legal</h2>
-              <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                <li className="mb-4">
-                  <Link href="#" className="hover:underline text-white">Privacy Policy</Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:underline text-white">Terms &amp; Conditions</Link>
-                </li>
-              </ul>
-            </div>
           </div>
         </div>
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
-          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <Link href="/" className="hover:underline">Kelurahan Discord</Link>. All Rights Reserved.
+          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <Link href="/" className="hover:underline">Kelurahan Margahayu</Link>. All Rights Reserved.
           </span>
           <div className="flex mt-4 sm:justify-center sm:mt-0">
             <Link href="#" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">

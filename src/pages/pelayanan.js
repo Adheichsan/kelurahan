@@ -14,7 +14,7 @@ function AhliWaris() {
         <><MetaHead
             title="Pelayanan | Kelurahan Patriot" />
             <div className='pt-20'>
-                <Row>
+                <Row className='pt-10'>
                     <Col className='pt-10'>
                         <div style={{ display: 'flex' }} className='pl-10'>
                             <div

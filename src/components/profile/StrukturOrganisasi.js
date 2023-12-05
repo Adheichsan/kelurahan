@@ -16,7 +16,7 @@ function StrukturOrganisasi() {
       <Container>
       <Row>
           <Col className='py-5'>
-            <h1 className='text-2xl font-bold text-center'>STRUKTUR ORGANISASI KELURAHAN KOTA PATRIOT</h1>
+            <h1 className='text-2xl font-bold text-center'>STRUKTUR ORGANISASI</h1>
           </Col>
         </Row>
         <Row>
@@ -25,7 +25,7 @@ function StrukturOrganisasi() {
           width={900}
           height={50}
           alt='struktur'
-          src='/images/unsplashh.jpg'
+          src='/images/struktur.png'
           className='mx-auto rounded'/>
           </Col>
         </Row>

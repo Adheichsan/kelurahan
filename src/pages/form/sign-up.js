@@ -8,34 +8,63 @@ function SignUp() {
   const [fullname, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
-  const handleSignInClick = () => {
-    router.push('/form/sign-in');
-  };
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null)
 
   const handleSignUpSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await fetch('/api/signup', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        fullname: fullname,
-        email: email,
-        password: password,
-      }),
-    });
+    try {
+      setIsLoading(true);
+      setError(null);
 
-    if (response.ok) {
-      router.push('/dashboard');
-    } else {
-      const data = await response.json();
-      console.error('Failed to create user account:', data.error);
+      if (!validateEmail(email)) {
+        setError('InvalidEmail');
+        return;
+      }
+
+      if (password.length < 8) {
+        setError('WeakPassword');
+        return;
+      }
+
+      const response = await fetch('/api/signup', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          fullname: fullname,
+          email: email,
+          password: password,
+        }),
+      });
+
+      if (response.ok) {
+        router.push('/dashboard');
+      } else {
+        const data = await response.json();
+        console.error('Failed to create user account:', data.error);
+
+        if (data.error === 'InvalidEmail') {
+          setError('InvalidEmail');
+        } else if (data.error === 'WeakPassword') {
+          setError('WeakPassword');
+        } else {
+          setError('UnknownError');
+        }
+      }
+    } catch (error) {
+      console.error('An unexpected error occurred:', error);
+      setError('UnknownError');
+    } finally {
+      setIsLoading(false);
     }
-  };
 
+    const validateEmail = (email) => {
+      return /\S+@\S+\.\S+/.test(email);
+    };
+  };
 
   return (
     <>
@@ -56,6 +85,13 @@ function SignUp() {
                 </div>
                 <form className="mt-8 space-y-6" onSubmit={handleSignUpSubmit}>
                   <div>
+                  {error && (
+                      <div className="text-red-500 mt-2">
+                        {error === 'InvalidEmail' && 'Invalid email address.'}
+                        {error === 'WeakPassword' && 'Password must be at least 8 characters long.'}
+                        {error === 'UnknownError' && 'An unexpected error occurred. Please try again later.'}
+                      </div>
+                    )}
                     <label htmlFor="name" className="block font-bold text-gray-700">
                       Full Name
                     </label>
@@ -100,22 +136,18 @@ function SignUp() {
                       required
                     />
                   </div>
+
                   <div>
+                    {/* Render loading indicator conditionally */}
                     <button
                       type="submit"
                       className="w-full px-4 py-3 font-bold text-white bg-indigo-500 rounded-md hover:bg-indigo-600 focus:outline-none focus:shadow-outline-indigo focus:border-indigo-700"
+                      disabled={isLoading}
                     >
-                      Sign Up
+                      {isLoading ? 'Signing Up...' : 'Sign Up'}
                     </button>
                   </div>
-                  <div>
-                    <button
-                      onClick={handleSignInClick}
-                      className="w-full px-4 py-3 font-bold text-indigo-500 border border-indigo-500 rounded-md hover:bg-indigo-200 focus:outline-none focus:shadow-outline-indigo focus:border-indigo-700"
-                    >
-                      Sign In
-                    </button>
-                  </div>
+
                 </form>
               </div>
             </div>

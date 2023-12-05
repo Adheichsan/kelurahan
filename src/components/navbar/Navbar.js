@@ -58,7 +58,7 @@ function Navbar() {
             alt="patriot"
           />
           <span className="self-center ml-3 text-xl font-semibold whitespace-nowrap">
-            Kelurahan Patriot
+            Kelurahan Margahayu
           </span>
         </Link>
 
@@ -108,8 +108,8 @@ function Navbar() {
         >
           <ul className="flex flex-col p-4 mt-4 font-medium border border-gray-100 rounded-lg md:p-0 bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             <li className="relative">
-              <Link href="/">
-                Home
+              <Link href="/" className="relative transition duration-300 ease-in-out transform hover:text-slate-400 active:scale-95">
+                Beranda
               </Link>
             </li>
 
@@ -126,7 +126,7 @@ function Navbar() {
                 aria-controls="profileDropdown"
                 aria-expanded={isProfileDropdownOpen}
               >
-                Profile{" "}
+                Profil{" "}
                 <svg
                   className={`w-2.5 h-2.5 ml-2.5 transition-transform ${isProfileDropdownOpen ? "rotate-180" : "rotate-0"
                     }`}
@@ -192,7 +192,7 @@ function Navbar() {
                 </ul>
               </div>
             </li>
-            
+
             {/* informasi */}
             <li className="relative">
               <button
@@ -273,10 +273,10 @@ function Navbar() {
                 </ul>
               </div>
             </li>
-            
+
             {/* Pelayanan */}
-              <li className="relative">
-              <Link href="/pelayanan">
+            <li className="relative">
+              <Link href="/pelayanan" className="relative transition duration-300 ease-in-out transform hover:text-slate-400 active:scale-95">
                 Pelayanan
               </Link>
             </li>
@@ -336,7 +336,7 @@ function Navbar() {
                       onClick={closeMobileMenu}
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                     >
-                      Gallery
+                      Galeri
                     </Link>
                   </li>
                 </ul>
@@ -344,14 +344,14 @@ function Navbar() {
             </li>
 
             <li className="relative">
-              <Link href="/form/sign-in">
-                Account
+              <Link href="/form/sign-in" className="relative transition duration-300 ease-in-out transform hover:text-slate-400 active:scale-95">
+                Akun
               </Link>
             </li>
 
             <li className="relative">
-              <Link href="/">
-                Contact us
+              <Link href="/" className="relative transition duration-300 ease-in-out transform hover:text-slate-400 active:scale-95">
+                Kontak kami
               </Link>
             </li>
           </ul>
